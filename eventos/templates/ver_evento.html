@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <title>Lista de Eventos Reservados</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .content-page {
+            background-image: url(https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            min-height: 100vh;
+        }
+        h1 {
+            text-align: center;
+            font-size: 40px;
+        }
+        .evento {
+            padding: 20px;
+            border: 5px solid #ccc;
+            margin: 20px 500px;
+            text-align: center;
+            border-color: #91C8E4;
+        }
+        .regresar-button {
+            margin-top: 30px;
+            margin-left: 15px;
+            width: 100px;
+            height: 45px;
+            border-radius: 2cm;
+            border: 3px solid #ccc;
+            border-color: #D71313;
+            background-color: white;
+            font-size: 15px;
+            color: black;
+        }
+        .regresar-button:hover {
+            background-color: #D71313;
+        }
+        .reservar-button {
+            margin-left: 670px;
+            margin-top: 30px;
+            width: 100px;
+            height: 45px;
+            border-radius: 2cm;
+            border: 3px solid #ccc;
+            border-color: #91C8E4;
+            background-color: white;
+            font-size: 15px;
+            color: black;
+        }
+        .reservar-button:hover {
+            background-color: #91C8E4;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-page">
+    <a href="{% url 'pagina_inicio' %}"><button class="regresar-button">Regresar a inicio</button></a>
+    <h1>Lista de Eventos Reservados</h1>
+    {% for reservar in eventos %}
+        <div class="evento">
+            <strong>Evento:</strong> {{ reservar.evento }}<br>
+            <strong>Nombre:</strong> {{ reservar.nombre }}<br>
+        </div>
+    {% endfor %}
+    <div class="botones">
+        
+        <a href="{% url 'reservar_evento' %}"><button class="reservar-button">Reservar otro evento</button></a>
+    </div>
+</div>
+</body>
+</html>

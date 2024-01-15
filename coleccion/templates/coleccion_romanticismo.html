@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <title>Del romanticismo al impresionismo y las vanguardias</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .back {
+            background-image: url(https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            min-height: 100vh;
+        }
+        .regresar-button {
+            margin-top: 30px;
+            margin-left: 15px;
+            width: 100px;
+            height: 45px;
+            border-radius: 2cm;
+            border: 3px solid #ccc;
+            border-color: #D71313;
+            background-color: white;
+            font-size: 15px;
+            color: black;
+        }
+        .regresar-button:hover {
+            background-color: #D71313;
+        }
+        .colecciones-button {
+            margin-left: 600px;
+            width: 100px;
+            height: 45px;
+            border-radius: 2cm;
+            border: 3px solid #ccc;
+            border-color: #91C8E4;
+            background-color: white;
+            font-size: 15px;
+            color: black;
+        }
+        .colecciones-button:hover {
+            background-color: #91C8E4;
+        }
+        h1 {
+            font-size: 40px;
+            text-align: center;
+            color: #91C8E4;
+        }
+        h2 {
+            font-size: 30px;
+            color: #91C8E4;
+            margin-bottom: 20px;
+        }
+        .content-page {
+            padding: 50px;
+        }
+        p {
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="back">
+    <a href="{% url 'pagina_inicio' %}"><button class="regresar-button">Regresar a inicio</button></a>
+    <h1>Del romanticismo al impresionismo y las vanguardias</h1>
+    <div class="content-page">
+        <h2>Historia</h2>
+        <p>Obras adquiridas una a una en prestigiadas casas de subasta, en busca de dialogar con discursos estéticos nacionales, muestran el paso a la Modernidad en el arte y han distinguido desde su creación, el coleccionismo dentro del proyecto cultural de Fundación Carlos Stim. En su mayoría han sido estudiadas por investigadores nacionales e internacionales, y han integrado exposiciones itinerantes por México y el resto de América Latina, al tiempo de ser compartidas para completar discursos museales y publicaciones en Europa, los Estados Unidos, Asia y Oceanía,
+            Durante el «Siglo de las Lucess, el paisaje dejo de ser ambientación para convertirse en protagonista con el vedutismo representado por Giovanni Antonio Canal, # Coneletto, Michele Marieschi y con impronta romántica, los Guardi y Bison, Contra los postulados académicos, desde Reino Unido las lecciones de sir Thomas Gainsborough y Joseph Mallord William Turner influenciaron al resto de las latitudes europeas. <br>
+            Personajes legendarios o de fuentes literarias clásicas se resignificaron en el dibujo preciso y el color de Jean-Auguste-Dominique Ingres, Un decidido carácter romántico se manifiesta en Eugène Delacroix. Las revoluciones patrióticas, las conquistas mercantilistas más allá de Europa y las guerras intestinas, avivaron sentimientos nacionalistas; sobrevino la obsesión por la muerte y la búsqueda de identidad en las glorias del pasado. Plenamente asumidos en el Romanticismo que prioriza el sentimiento frente a la razón, Francisco de Goya, Gustave Doré y Théodore Géricault se dan cita en los fondos de Museo. <br>
+            En el bosque de Fontainebleau nació la Escuela de Barbizon, De aquel preludio de la pintura en plein air: Théodore Rousseau, Jean-Baptiste-Camille Corot, Narcisse Diaz de la Peña, François Millet... Frente a la Revolución Industrial, el Realismo Social enalteció los ambientes bucólicos y a sus protagonistas.
+            Pastores, campesinos, pescadores y obreros pueblan los lienzos de Léon-Augustin Lhermitte, Frithjof Smith-Hald, Jozef e Isaac Israëls, Jules Breton y su hija, Virginie Demont Breton, En contraste, la ironia mordaz hacia los excesos de la clase política y la crítica a las desigualdades sociales estremecen en el trabajo al óleo de Honore Daumier.<br>
+            Cuatro obras tempranas de Vincent van Gogh relatadas en las cartas a su hermano Theo -únicas del artista en la región-, integran la colección mexicana.
+            Cobaño con compesino que regresa a cosa (1885) es acaso uno de los primeros óleos firmados por el maestro.<br>
+            Alejado del rigor neoclasicista, Edouard Manet, Gustave Courbet se representa con bosques y marinas de intensa luminosidad y vigoroso trazo. Ambos preconizan uno de los momentos mas brillantes de la historia del arte: el llamado Impresionismo que, con la pincelada de toque, construyó formas a través de la luz. Claude Monet, Edgar Degas, Camille Pissarro, Pierre-Auguste Renoir, Armand Guillaumin, Alphonse Legros... desde el Salon des Refusés o "Salón de los Rechazados", definieron el rumbo de la plástica. La colección da cuenta de la visión de escenarios íntimos creados por mujeres artistas que, a fuerza de talento y trabajo, se abrieron paso en un mundo mayoritariamente masculino: las francesas Berthe Morisot y Eva Gonzalès, junto a la norteamericana Mary Cassatt, dialogan con la siguiente generación: Marie Laurencin, la gacela entre las bestias y los brillos que exploran la abstracción de Tamara de Lempicka.<br>
+            El interés por la luz prevaleció en la pintura del valenciano Joaquín Sorolla y en el texano Julian Onderdonk, mientras que la experimentación con los efectos de la óptica derivó en el divisionismo de Maximilien Luce y Paul Signac.</p><br>
+        <!-- Botón para regresar a la página de inicio -->
+        <a href="{% url 'colecciones_museo' %}"><button class="colecciones-button">Colecciones</button></a>
+    </div>
+</div>
+</body>
+</html>

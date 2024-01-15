@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <title>La Colonia</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .back {
+            background-image: url(https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            min-height: 100vh;
+        }
+        .regresar-button {
+            margin-top: 30px;
+            margin-left: 15px;
+            width: 100px;
+            height: 45px;
+            border-radius: 2cm;
+            border: 3px solid #ccc;
+            border-color: #D71313;
+            background-color: white;
+            font-size: 15px;
+            color: black;
+        }
+        .regresar-button:hover {
+            background-color: #D71313;
+        }
+        .colecciones-button {
+            margin-left: 600px;
+            width: 100px;
+            height: 45px;
+            border-radius: 2cm;
+            border: 3px solid #ccc;
+            border-color: #91C8E4;
+            background-color: white;
+            font-size: 15px;
+            color: black;
+        }
+        .colecciones-button:hover {
+            background-color: #91C8E4;
+        }
+        h1 {
+            font-size: 40px;
+            text-align: center;
+            color: #91C8E4;
+        }
+        h2 {
+            font-size: 30px;
+            color: #91C8E4;
+            margin-bottom: 20px;
+        }
+        .content-page {
+            padding: 50px;
+        }
+        p {
+            font-size: 25px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="back">
+        <a href="{% url 'pagina_inicio' %}"><button class="regresar-button">Regresar a inicio</button></a>
+        <h1>La Era de Rodin</h1>
+        <div class="content-page">
+        <h2>Historia</h2>
+        <p>La nutrida colección de escultura europea de los siglos XIX y xx da cuenta del paso del Romanticismo hacia la Modernidad. Mármoles, terracotas, yesos, ceras, bronces y pasta de vidrio abrevan en temas mitológicos, históricos y literarios en franca libertad creadora. Figuras de cuerpo entero, bustos e inéditos fragmentos permiten transitar de las formas equilibradas del estilo academicista hacia una exploración de mayor expresividad.<br>
+            Obras de gusto neoclásico de artistas como Louis-Ernest Barrias, Paul Dubois, Jean-Baptiste Carpeaux y Albert-Ernest Carrier-Belleuse dialogan con volúmenes de corte romántico como Amor secreto atribuible a Antonio Rosetti, así como las controvertidas e incisivas caricaturas de algunos miembros del parlamento francés: las Celebridades del justo medio de Honoré Daumier.<br>
+            A partir del ecuador del siglo xIx, la consolidada burguesía optó por nuevos formatos. Si bien la estatuaria siguió en el aliento simbólico en las ciudades, la escultura en reducidos formatos permitió el análisis del movimiento, el vacío, la sombra...<br>
+            A los caballos de Edgar Degas le siguieron bailarinas y bañistas que se fundieron en bronce después de su muerte. El yeso monumental de la Venus victoriosa explora los procesos creativos de Auguste Renoir.<br>
+            El nuevo discurso plástico llegó con la revolución inaugurada por el padre de la escultura moderna: Auguste Rodin. La gliptoteca de Fundación Carlos Slim comenzó en 1992 con la disruptiva Máscara del hombre de la nariz rota. De manera constante se han integrado una a una, obras de todos los materiales y de todas las etapas creativas del maestro.<br>
+            El acervo ha sido cuidadosamente estudiado por el investigador John L. Tancock, quien escribió: El Museo Soumaya nos permite apreciar sobre todo la fecundidad y la enorme variedad de la obra del escultor durante los más de 50 años de actividad. También se han dado cita crítica las voces plurales de François Blanchetière, Aline Magnien, Diane Tytgat, Agustín Arteaga, Cheryl Hartup, Richard Aste, John Zarobell, Soumaya Slim Domit... Recientemente, Jérôme Le Blay revisitó el fondo para completar su estudio enciclopédico, que por primera vez busca redimensionar la obra rodiniana. La amplitud, la variedad y la extensión en el tiempo de esta colección, que sigue enriqueciéndose (...] son tales que se hizo imprescindible para el Comité Rodin hacer un inventario de estas obras, afirmó el especialista.<br>
+            Entre quienes interpretaron el espíritu rebelde, simbólico y anticonformista del maestro, Camille Claudel, artista por derecho propio, está presente con obras emblemáticas como Las conversadoras, La ola o El vals. Por su parte, Émile-Antoine Bourdelle da cuenta de una búsqueda hacia la estilización y geometrización que formó a las nuevas generaciones de vanguardia.<br>
+            Desde la sala Julián y Linda Slim de Museo Soumaya en la sede de Plaza Carso, se reúne bajo un mismo techo y en un espacio libre de columnas -reto de ingeniería-, la colección más amplia de Auguste Rodin fuera de Francia. Como si se tratara de un bosque de mármol y bronce, sin interruptores se aprecian los cuatro perfiles de las formas. La techumbre desvelada, única en permitir la entrada de los rayos solares, ofrece la oportunidad de apreciar el juego de luces y sombras en atmósferas que comprometen al espectador activo a emprender un recorrido propio, crítico y en libertad.</p><br>
+        <!-- Botón para regresar a la página de inicio -->
+        
+        <a href="{% url 'colecciones_museo' %}"><button class="colecciones-button">Colecciones</button></a>
+    </div>
+</div>
+</body>
+</html>

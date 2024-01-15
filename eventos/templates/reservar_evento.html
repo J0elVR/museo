@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <title>Reservar Evento</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .content-page {
+            background-image: url(https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            min-height: 100vh;
+        }
+        .regresar-button {
+            margin-top: 30px;
+            margin-left: 15px;
+            width: 100px;
+            height: 45px;
+            border-radius: 2cm;
+            border: 3px solid #ccc;
+            border-color: #D71313;
+            background-color: white;
+            font-size: 15px;
+            color: black;
+        }
+        .regresar-button:hover {
+            background-color: #D71313;
+        }
+        .eventos-button {
+            margin-top: 200px;
+            margin-left: 400px;
+            width: 100px;
+            height: 45px;
+            border-radius: 2cm;
+            border: 3px solid #ccc;
+            border-color: #91C8E4;
+            background-color: white;
+            font-size: 15px;
+            color: black;
+        }
+        .eventos-button:hover {
+            background-color: #91C8E4;
+        }
+        .reservacion-button {
+            margin-left: 200px;
+            width: 120px;
+            height: 45px;
+            border-radius: 2cm;
+            border: 3px solid #ccc;
+            border-color: #91C8E4;
+            background-color: white;
+            font-size: 15px;
+            color: black;
+        }
+        .reservacion-button:hover {
+            background-color: #91C8E4;
+        }
+
+        h1 {
+            text-align: center;
+        }
+        .input-reserva {
+            margin-left: 100px;
+            margin-top: 200px;
+        }
+        label {
+            font-size: 30px;
+        }
+        input[type="text"] {
+            width: 600px;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            font-size: 20px;
+            border-radius: 1cm;
+            border: 2px solid #ccc;
+            border-color: black;
+        }
+
+        input[type="submit"] {
+            width: 100px;
+            height: 45px;
+            border-radius: 2cm;
+            border: 3px solid #ccc;
+            border-color: #91C8E4;
+            background-color: white;
+            font-size: 15px;
+            color: black;
+        }
+    </style>
+</head>
+    <body>
+        <div class="content-page">
+            <a href="{% url 'pagina_inicio' %}"><button class="regresar-button">Regresar a inicio</button></a>
+            <h1>Reservar evento para "{{ evento }}"</h1>
+
+            <div class="input-reserva">
+                <form method="post">
+                    {% csrf_token %}
+                    <label for="id_nombre">Ingresa tu nombre completo:</label>
+                    {{ form.nombre }}
+                    <input type="submit" value="Reservar">
+                </form>
+                <!-- Botón para regresar a la página de inicio -->
+                
+
+                <a href="{% url 'eventos_museo' %}"><button class="eventos-button">Ver Eventos</button></a>
+                
+                <!-- Botón para ver la lista de eventos -->
+                <a href="{% url 'ver_evento' %}"><button class="reservacion-button">Ver reservaciones</button></a>
+        </div>
+        </div>
+
+    </body>
+</html>

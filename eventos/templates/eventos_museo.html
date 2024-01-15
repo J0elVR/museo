@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <title>Eventos del museo</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .content-page {
+            background-image: url(https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            min-height: 100vh;
+        }
+        h1 {
+            text-align: center;
+            font-size: 40px;
+        }
+        .actividades {
+            padding: 20px;
+        }
+        .texto1 {
+            /* background-color: #D71313; */
+            width: 600px;
+            height: 200px;
+            margin-left: 50px;
+        }
+        .texto2 {
+            width: 600px;
+            height: 200px;
+            margin-left: 50px;
+        }
+        .texto3 {
+            width: 600px;
+            height: 200px;
+            margin-left: 50px;
+        }
+        .literatura-img {
+            width: 300px;
+            height: 200px;
+            margin-left: 60px;
+            /* border: 3px solid #ccc; */
+            border-radius: 1cm;
+        }
+        .taller-img {
+            width: 300px;
+            height: 200px;
+            margin-left: 70px;
+            /* border: 3px solid #ccc; */
+            border-radius: 1cm;
+        }
+        .ninos-img {
+            width: 300px;
+            height: 200px;
+            margin-left: 10px;
+            /* border: 3px solid #ccc; */
+            border-radius: 1cm;
+        }
+        .regresar-button {
+            margin-top: 30px;
+            margin-left: 15px;
+            width: 100px;
+            height: 45px;
+            border-radius: 2cm;
+            border: 3px solid #ccc;
+            border-color: #D71313;
+            background-color: white;
+            font-size: 15px;
+            color: black;
+        }
+        .regresar-button:hover {
+            background-color: #D71313;
+        }
+        .button-reservar1 {
+            margin-bottom: 40px;
+            margin-left: 20px;
+            width: 100px;
+            height: 45px;
+            border-radius: 2cm;
+            border: 3px solid #ccc;
+            border-color: #91C8E4;
+            background-color: white;
+            font-size: 15px;
+            color: black;
+        }
+        .button-reservar2 {
+            margin-left: 20px;
+            margin-bottom: 80px;
+            width: 100px;
+            height: 45px;
+            border-radius: 2cm;
+            border: 3px solid #ccc;
+            border-color: #91C8E4;
+            background-color: white;
+            font-size: 15px;
+            color: black;
+        }
+        .button-reservar3 {
+            margin-left: 20px;
+            margin-bottom: 60px;
+            width: 100px;
+            height: 45px;
+            border-radius: 2cm;
+            border: 3px solid #ccc;
+            border-color: #91C8E4;
+            background-color: white;
+            font-size: 15px;
+            color: black;
+        }
+        .button-reservar1:hover, .button-reservar2:hover, .button-reservar3:hover {
+            background-color: #91C8E4;
+        }
+        .poesia {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+        .talleres {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+        .actividades-ninos {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="content-page">
+        <a href="{% url 'pagina_inicio' %}"><button class="regresar-button">Regresar</button></a>
+        <h1>Actividades</h1>
+        <div class="actividades">
+            <div class="poesia">
+                <h2 class="titulo1">Poesía y literatura</h2>
+                <img src="https://images.pexels.com/photos/1560093/pexels-photo-1560093.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" class="literatura-img">
+                <p class="texto1">Sumérgete en la fusión única de palabras y arte en nuestro evento de Poesía y Literatura. Experimenta la magia de la creación literaria mientras exploras las galerías, donde las palabras dan vida a las obras maestras. Disfruta de lecturas de poesía inspiradas en las exhibiciones. Este encuentro transcurre en un ambiente enriquecido por la convergencia de la expresión artística y literaria, creando un espacio donde las palabras danzan entre las obras de arte, revelando nuevas perspectivas y emociones. Únete a nosotros para una experiencia única que celebra la conexión entre la poesía y la creatividad visual en el corazón de nuestro amado museo.</p>
+                <a href="{% url 'reservar_evento' %}?evento=Poesia%20y%20literatura"><button class="button-reservar1">Reservar</button></a>
+            </div>    
+
+            <div class="talleres">
+                <h2>Talleres artísticos</h2>
+                <img src="https://images.pexels.com/photos/542555/pexels-photo-542555.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" class="taller-img">
+                <p class="texto2">Experimenta con una variedad de técnicas y estilos, desde la pintura hasta la escultura, guiado por talentosos instructores. Estos talleres ofrecen a adultos y niños la oportunidad de explorar su expresión artística mientras se inspiran en las magníficas obras del museo. Únete a nosotros para una experiencia única, donde el arte no solo se contempla, sino que también se crea con tus propias manos.</p>
+                <a href="{% url 'reservar_evento' %}?evento=Talleres%20artisticos"><button class="button-reservar2">Reservar</button></a>
+            </div>
+
+            <div class="actividades-ninos">
+                <h2>Actividades para niños</h2>
+                <img src="https://images.pexels.com/photos/4161111/pexels-photo-4161111.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" class="ninos-img">
+                <p class="texto3">Bienvenidos a un mundo de magia y aprendizaje en nuestras Actividades para Niños en el Museo Soumaya. Diseñadas especialmente para los más pequeños, estas actividades combinan diversión y educación en un entorno lleno de arte. Desde emocionantes búsquedas de tesoros hasta coloridas sesiones de creación artística, los niños explorarán la maravillosa conexión entre la imaginación y las obras maestras que alberga el museo. Celebra cumpleaños de manera única y estimulante, donde cada niño se convierte en un pequeño artista en este viaje de descubrimiento cultural.</p>
+                <a href="{% url 'reservar_evento' %}?evento=Actividades%20para%20ninos"><button class="button-reservar3">Reservar</button></a>
+            </div>
+        </div>
+    </div>
+    <!-- Botón para regresar a la página de inicio -->
+    
+
+    <!-- <table class="default">
+        <caption><h2>Actividades dentro del museo</h2></caption>
+        <tr>
+            <td>Poesía y literatura</td>
+            <td>Sumérgete en la fusión única de palabras y arte en nuestro evento de Poesía y Literatura. Experimenta la magia de la creación literaria mientras exploras las galerías, donde las palabras dan vida a las obras maestras. Disfruta de lecturas de poesía inspiradas en las exhibiciones. Este encuentro transcurre en un ambiente enriquecido por la convergencia de la expresión artística y literaria, creando un espacio donde las palabras danzan entre las obras de arte, revelando nuevas perspectivas y emociones. Únete a nosotros para una experiencia única que celebra la conexión entre la poesía y la creatividad visual en el corazón de nuestro amado museo.</td>
+
+            <td><a href="{% url 'reservar_evento' %}?evento=Cultura%20Mexica"><button>Reservar</button></a></td>
+        </tr>
+        <tr>
+            <td>Cultura Olmeca</td>
+            <td>Este es un evento que hablará de la cultura Olmeca</td>
+            <td><a href="{% url 'reservar_evento' %}?evento=Cultura%20Olmeca"><button>Reservar</button></a></td>
+        </tr>
+        <tr>
+            <td>Cultura Totonaca</td>
+            <td>Este es un evento que hablará de la cultura Totonaca</td>
+            <td><a href="{% url 'reservar_evento' %}?evento=Cultura%20Totonaca"><button>Reservar</button></a></td>
+        </tr>
+    </table> -->
+    
+</body>
+</html>
+

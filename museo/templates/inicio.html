@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <title>Bienvenido al Museo</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .contentPage {
+            background-image: url(https://images.pexels.com/photos/2167395/pexels-photo-2167395.jpeg);
+            /* background-image: url(https://images.pexels.com/photos/3652853/pexels-photo-3652853.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2); */
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            min-height: 90.5vh;
+            background-attachment: fixed;
+            display: flex;
+            align-items: flex-start; /* Alinea los elementos en la parte superior */
+            justify-content: center;
+            text-align: center;
+            padding: 30px 0;
+            
+        }
+
+        .contentPage a button {
+            margin-left: 100px;
+            color: white;
+            text-decoration: none;
+            padding: 2px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .navBar {
+            display: flex;
+            justify-content: space-around; /* Distribuye uniformemente los elementos a lo largo del eje principal */
+            align-items: center; /* Centra verticalmente los elementos */
+            background-color: white; /* Color de fondo para mayor claridad */
+            padding: 30px; 
+        }
+
+        .navBar h1 {
+            color: black;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navBar">
+        <h1>Fill Gaps</h1>
+    </nav>
+
+    <div class="contentPage">
+        <a href="{% url 'historia_museo' %}"><button>Acerca de nosotros</button></a><br>
+        <a href="{% url 'info_museo' %}"><button>Informacion del museo</button></a><br>
+        <a href="{% url 'eventos_museo' %}"><button>Actividades</button></a><br>
+        <a href="{% url 'colecciones_museo' %}"><button>Colecciones</button></a>
+        <a href="{% url 'registrar_empleado' %}"><button>Administrador del Museo</button></a><br>
+    </div>
+</body>
+</html>

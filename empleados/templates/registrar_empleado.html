@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+
+    <title>Registrar Empleado</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .content-page {
+            background-image: url(https://images.pexels.com/photos/14302398/pexels-photo-14302398.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            min-height: 100vh;
+        }
+        
+        .container {
+            width: 100%;
+            text-align: center;
+        }
+        h1 {
+            padding-top: 30px;
+            color: white;
+            text-align: center;
+            font-size: 50px;
+            color: #92C7CF;
+        }
+        p {
+            padding: 20px;
+            color: white;
+            text-align: center;
+            font-size: 17px;
+        }
+        .label-nombre {
+            color: white;
+            font-size: 40px;
+        }
+        .input-nombre {
+            margin-left: 30px;
+            border-radius: 1cm;
+            border: 2px solid #ccc;
+            border-color: black;
+            width: 10cm;
+            height: 1cm;
+            font-size: 20px;
+            background-color: #FBF9F1;
+        }
+        .label-direccion {
+            font-size: 40px;
+            color: white;
+        }
+        .input-direccion {
+            margin-left: 10px;
+            border-radius: 1cm;
+            border: 2px solid #ccc;
+            border-color: black;
+            width: 10cm;
+            height: 1cm;
+            font-size: 20px;
+            background-color: #FBF9F1;
+        }
+        .label-telefono {
+            font-size: 40px;
+            color: white;
+        }
+        .input-telefono {
+            margin-left: 20px;
+            border-radius: 1cm;
+            border: 2px solid #ccc;
+            border-color: black;
+            width: 10cm;
+            height: 1cm;
+            font-size: 20px;
+            background-color: #FBF9F1;
+        }
+        .label-email {
+            font-size: 40px;
+            color: white;
+        }
+        .input-email {
+            margin-left: 80px;
+            border-radius: 1cm;
+            border: 2px solid #ccc;
+            border-color: black;
+            width: 10cm;
+            height: 1cm;
+            font-size: 20px;
+            background-color: #FBF9F1;
+        }
+        .label-curp {
+            font-size: 40px;
+            color: white;
+        }
+        .input-curp {
+            margin-left: 80px;
+            border-radius: 1cm;
+            border: 2px solid #ccc;
+            border-color: black;
+            width: 10cm;
+            height: 1cm;
+            font-size: 20px;
+            background-color: #FBF9F1;
+        }
+        .registrar-button {
+            margin-top: 30px;
+            width: 590px;
+            height: 50px;
+            border-radius: 2cm;
+            background-color: #FBF9F1;
+            font-size: 20px;
+            border: 5px solid #ccc;
+            border-color: #FBF9F1;
+        }
+        .registrar-button:hover {
+            background-color: #AAD7D9;
+            border-color: #AAD7D9;
+        }
+        .regresar-button {
+            margin-top: 30px;
+            margin-left: 15px;
+            width: 100px;
+            height: 45px;
+            border-radius: 2cm;
+            border: 3px solid #ccc;
+            border-color: #D71313;
+            background-color: white;
+            font-size: 15px;
+            color: black;
+        }
+        .regresar-button:hover {
+            background-color: #D71313;
+        }
+        .lista-button {
+            margin-top: 20px;
+            width: 200px;
+            height: 50px;
+            border-radius: 2cm;
+            background-color: #FBF9F1;
+            font-size: 20px;
+            border: 5px solid #ccc;
+            border-color: #FBF9F1;
+        }
+        .lista-button:hover {
+            background-color: #AAD7D9;
+            border-color: #AAD7D9;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="content-page">
+        <!-- Botón para regresar a la página de inicio -->
+        <a href="{% url 'pagina_inicio' %}"><button class="regresar-button">Regresar</button></a>
+        <h1>Registro del personal</h1>
+        <p>Llenar los siguientes campos, todos los campos son obigatorios*</p>
+
+        <div class="container">
+            <form method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="nombre" class="label-nombre">Nombre:</label>
+                    <input type="text" class="input-nombre" id="nombre" name="nombre" style="padding-left: 10px;">
+                </div>
+                <div class="mb-3">
+                    <label for="direccion" class="label-direccion">Dirección:</label>
+                    <input type="text" class="input-direccion" id="direccion" name="direccion" style="padding-left: 10px;">
+                </div>
+                <div class="mb-3">
+                    <label for="telefono" class="label-telefono">Teléfono:</label>
+                    <input type="tel" class="input-telefono" id="telefono" name="telefono" style="padding-left: 10px;">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="label-email">Email:</label>
+                    <input type="email" class="input-email" id="email" name="email" style="padding-left: 10px;">
+                </div>
+                <div class="mb-3">
+                    <label for="curp" class="label-curp">CURP:</label>
+                    <input type="text" class="input-curp" id="curp" name="curp" style="padding-left: 10px;">
+                </div>
+                <!-- {{ form.as_p }} -->
+                <button class= "registrar-button" type="submit">Registrar</button>
+            </form>
+            <a href="{% url 'lista_empleados' %}"><button class="lista-button">Lista del personal</button></a>
+
+        </div>
+        
+        
+        
+        <!-- Botón para ver la lista de empleados -->
+        
+    </div>
+
+</body>
+</html>

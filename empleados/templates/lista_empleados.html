@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <title>Lista de Empleados</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+            /* background-color: blue; */
+            color: white;
+        }
+        h1 {
+            color: white;
+            text-align: center; 
+            font-size: 50px;
+            color: #92C7CF;
+        }
+        .content-page {
+            background-image: url(https://images.pexels.com/photos/14302398/pexels-photo-14302398.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            min-height: 100vh;
+        }
+        .personal {
+            padding: 20px;
+            border: 5px solid #ccc;
+            margin: 10px 500px;
+            text-align: center;
+            border-color: #AAD7D9;
+        }
+        .regresar-button {
+            margin-top: 30px;
+            margin-left: 15px;
+            width: 100px;
+            height: 45px;
+            border-radius: 2cm;
+            border: 3px solid #ccc;
+            border-color: #D71313;
+            background-color: #FBF9F1;
+            font-size: 15px;
+            color: black;
+        }
+        .regresar-button:hover {
+            background-color: #D71313;
+        }
+        .registrar-button {
+            color: black;
+            margin-top: 30px;
+            width: 590px;
+            height: 50px;
+            border-radius: 2cm;
+            background-color: white;
+            font-size: 20px;
+            border: 5px solid #ccc;
+            border-color: #92C7CF;
+        }
+        .registrar-button:hover {
+            background-color: #92C7CF;
+        }
+        .clase-registrar {
+            text-align: center;
+        }
+        .content-lista {
+            padding: 30px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="content-page">
+        <a href="{% url 'pagina_inicio' %}"><button class="regresar-button">Regreso al inicio</button></a>
+
+        <div class="content-lista">
+            <h1>Lista del personal</h1>
+            {% for empleado in empleados %}
+                <div class="personal">
+                    <strong>Nombre:</strong> {{ empleado.nombre }}<br>
+                    <strong>Dirección:</strong> {{ empleado.direccion }}<br>
+                    <strong>Teléfono:</strong> {{ empleado.telefono }}<br>
+                    <strong>Email:</strong> {{ empleado.email }}<br>
+                    <strong>CURP:</strong> {{ empleado.curp }}<br>
+
+                </div>
+                {% endfor %}
+                <div class="clase-registrar">
+                    <a href="{% url 'registrar_empleado' %}"><button class="registrar-button">Registrar otro personal</button></a>
+                </div>
+        </div>
+                
+    
+
+    </div>
+</body>
+</html>

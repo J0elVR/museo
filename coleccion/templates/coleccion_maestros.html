@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <title>Antiguos maestros europeos</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .back {
+            background-image: url(https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            min-height: 100vh;
+        }
+        .regresar-button {
+            margin-top: 30px;
+            margin-left: 15px;
+            width: 100px;
+            height: 45px;
+            border-radius: 2cm;
+            border: 3px solid #ccc;
+            border-color: #D71313;
+            background-color: white;
+            font-size: 15px;
+            color: black;
+        }
+        .regresar-button:hover {
+            background-color: #D71313;
+        }
+        .colecciones-button {
+            margin-left: 600px;
+            width: 100px;
+            height: 45px;
+            border-radius: 2cm;
+            border: 3px solid #ccc;
+            border-color: #91C8E4;
+            background-color: white;
+            font-size: 15px;
+            color: black;
+        }
+        .colecciones-button:hover {
+            background-color: #91C8E4;
+        }
+        h1 {
+            font-size: 40px;
+            text-align: center;
+            color: #91C8E4;
+        }
+        h2 {
+            font-size: 30px;
+            color: #91C8E4;
+            margin-bottom: 20px;
+        }
+        .content-page {
+            padding: 50px;
+        }
+        p {
+            font-size: 25px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="back">
+        <a href="{% url 'pagina_inicio' %}"><button class="regresar-button">Regresar a inicio</button></a>
+        <h1>Antiguos maestros europeos</h1>
+        <div class="content-page">
+        <h2>Historia</h2>
+        <p>Salvo la colección del Museo Nacional de San Carlos y algunos esfuerzos de coleccionistas particulares, dificilmente se puede estudiar y admirar en México la producción artística europea de tan distintas latitudes realizada entre los siglos XIV al xvill en los que convergen los estilos gótico, renacentista, manierista, barroco y el tránsito al Neoclasicismo, etapas doradas de la Historia del arte en Occidente.<br>
+            La obra más antigua en el acervo data de 1350 y pertenece a la mano de Niccolò di Ser Sozzo Tegliacci; de la escuela italiana, la colección cuenta con grandes intérpretes del Renacimiento florentino como el Maestro de San Miniato, Sandro Botticelli, Davide Ghirlandaio, los Di Ridolfo, Bernardino di Betto conocido como il Pinturicchio, Andrea del Sarto, Filippino Lippi y el también biógrafo Giorgio Vasari. Asimismo, magnos ejemplos de la fusión entre formas hieráticas bizantinas, preciosismo flamenco y un novedoso empleo del color están representados por pintores vénetos como Giovanni Bellini; Lorenzo Tiepolo; Jacopo Robusti, il Tintoretto; Paolo Caliari, il Veronese; Tiziano Vecellio y los Bassano. De impronta barroca, artistas como Orazio Gentileschi y su hija Artemisia, referente creativo y símbolo junto con Elisabetha Siriani, quienes han sido resignificadas por los estudios de género.<br>
+            La escuela española está ampliamente representada por los pinceles manieristas y el color veneciano de Doménikos Theotokópoulos, el Greco; el realismo barroco de José de Ribera, el Españoleto; el misticismo de Francisco de Zurbarán, junto con la delicadeza de Bartolomé Esteban Murillo y Juan Carreño de Miranda.<br>
+            En Flandes, entre los grandes intérpretes del «humanismo nórdico»: Joachim Patinir; Lucas Gassel; Peteer Baltens, Custodis; Martin de Vos y la dinastía de los Brueghel, cuya pintura costumbrista y alternativa naturalista ofreció una estimulante crónica de la época. También sobresalen los retratos de Anton van Dijck, Frans Hals, y la impronta del barroco por antonomasia de Peter Paul Rubens.<br>
+            De Alemania, los Cranach, quienes destacaron por la sensualidad de sus figuras en escenas altamente simbólicas que renunciaban al paisaje y a la perspectiva.<br>
+            La escuela francesa está presente con el marcado chiaroscuro de Trophime Bigot, las sugestivas atmósferas de Claude-Joseph Vernet y la impronta de Élisabeth Vigée-Le Brun.<br>
+            Del gran estilo británico, algunos de los más celebrados maestros son Thomas Gainsborough, Joshua Reynolds y George Romney.<br>
+            Los ejemplos más significativos de cada vertiente dialogan con los Antiguos Maestros virreinales en una atmósfera azul intensa que resalta los brillos de marcos en la sala tres de la sede de Plazo Carso. La articulación en núcleos temáticos permite confrontar y destacar las diferentes cualidades plásticas de aquellos creadores que marcaron el rumbo de la historia.</p><br>
+        <!-- Botón para regresar a la página de inicio -->
+        
+        <a href="{% url 'colecciones_museo' %}"><button class="colecciones-button">Colecciones</button></a>
+    </div>
+    </div>
+</body>
+</html>

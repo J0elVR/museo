@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <title>Informacion del museo</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .content-page {
+            background-image: url(https://images.pexels.com/photos/3652853/pexels-photo-3652853.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            min-height: 100vh;
+            background-attachment: fixed;
+        }
+        h1 {
+            text-align: center;
+            color: #91C8E4;
+            font-size: 40px;
+        }
+        h2 {
+            color: #91C8E4;
+        }
+        p {
+            color: white;
+        }
+        .regresar-button {
+            margin-top: 30px;
+            margin-left: 15px;
+            width: 100px;
+            height: 45px;
+            border-radius: 2cm;
+            border: 3px solid #ccc;
+            border-color: #D71313;
+            background-color: white;
+            font-size: 15px;
+            color: black;
+        }
+        .regresar-button:hover {
+            background-color: #D71313;
+        }
+        .info {
+            padding: 60px;
+        }
+        .horario-p {
+            margin-top: 10px;
+        }
+        .tarifa-h2 {
+            margin-left: 800px;
+        }
+        .tarifa-p {
+            margin-top: 10px;
+            margin-left: 800px;
+            height: 120px;
+            width: 450px;
+        }
+        .restricciones-h2 {
+
+        }
+        .restricciones-p {
+            margin-top: 10px;
+            height: 130px;
+            width: 500px;
+        }
+        .visitas-h2 {
+            margin-left: 800px;
+        }
+        .visitas-p {
+            margin-top: 10px;
+            margin-left: 800px;
+            height: 100px;
+            width: 500px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="content-page">
+        
+        <a href="{% url 'pagina_inicio' %}"><button class="regresar-button">Regresar</button></a>
+        <h1>Información general</h1>
+        <div class="info">
+
+            <h2>Horarios</h2>
+            <p class="horario-p">Horarios: Abierto todos los días de 10:30 a 18:30 horas</p><br>
+
+            <h2 class="tarifa-h2">Precios</h2>
+            <p class="tarifa-p">La entrada al museo es gratuita todos los días de la semana.<br></p>
+
+            <h2 class="restricciones-h2">Actividades Culturales</h2>
+            <p class="restricciones-p">Contamos con diversas actividades culturales durante todo el año, estas van cambiando constantemente.<br>
+            Si quiere conocer más sobre las actividades culturales que tenemos en este momento, te invito a que visite el apartado de "Actividades" dentro de nuestra página</p>
+
+            <h2 class="visitas-h2">Visitas Guiadas</h2>
+            <p class="visitas-p">El servicio se ofrece de martes a sabado de manera gratuita dos veces al dia, a las 10:00 y a las 12:00
+                horas. El servicio se solicita en el modulo de atencion al visitantes y estara
+                condicionado a la disponibilidad de guias</p>
+        </div>
+</div>
+</body>
+</html>

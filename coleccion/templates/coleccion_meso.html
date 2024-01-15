@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <title>Paisaje del México independiente</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .back {
+            background-image: url(https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            min-height: 100vh;
+        }
+        .regresar-button {
+            margin-top: 30px;
+            margin-left: 15px;
+            width: 100px;
+            height: 45px;
+            border-radius: 2cm;
+            border: 3px solid #ccc;
+            border-color: #D71313;
+            background-color: white;
+            font-size: 15px;
+            color: black;
+        }
+        .regresar-button:hover {
+            background-color: #D71313;
+        }
+        .colecciones-button {
+            margin-left: 600px;
+            width: 100px;
+            height: 45px;
+            border-radius: 2cm;
+            border: 3px solid #ccc;
+            border-color: #91C8E4;
+            background-color: white;
+            font-size: 15px;
+            color: black;
+        }
+        .colecciones-button:hover {
+            background-color: #91C8E4;
+        }
+        h1 {
+            font-size: 40px;
+            text-align: center;
+            color: #91C8E4;
+        }
+        h2 {
+            font-size: 30px;
+            color: #91C8E4;
+            margin-bottom: 20px;
+        }
+        .content-page {
+            padding: 50px;
+        }
+        p {
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="back">
+        <a href="{% url 'pagina_inicio' %}"><button class="regresar-button">Regresar a inicio</button></a>
+        <h1>Paisaje del México independiente</h1>
+        <div class="content-page">
+        <h2>Historia</h2>
+        <p>El 27 de septiembre de 1821, hace 200 años, se reconfiguró el orden. Tras la firma del Acta de Independencia y el origen del Primer Imperio Mexicano, el mundo volteó de lleno la mirada hacia nuestro país y su construcción; ya emancipada despertó el interés de artistas y exploradores extranjeros quienes, entre 1823 y 1860, lo reconocieron y manifestaron su grandilocuencia por medio de obras literarias y visuales. La nutrida colección de Paisaje del México independiente en Museo Soumaya. Fundación Carlos Slim da cuenta de la diversidad de vistas rurales y urbanas, así como de tipos populares que artistas viajeros y pintores representaron en sus lienzos bajo una impronta romántica. Adquiridas una a una y en su mayoría repatriadas con el fin de emprender estudios formales para su exhibición, integraron un compendio de los autores más importantes como Jean-Baptiste-Louis, segundo barón Gros, Daniel Thomas Egerton, Johan Moritz Rugendas, Auguste Löhr y Conrad Wise Chapman.... quienes representaron las cumbres del Popocatépetl, el Iztaccíhuatl, el Pico de Orizaba, el Nevado de Toluca y Zacatecas. Asimismo, lugares emblemáticos como el Camino Tierra Adentro o el Valle de México y Chapultepec.<br>
+            Muchos de estos pintores organizaron o integraron expediciones científicas que dan cuenta del pasado mesoamericano; sus imágenes resultan un capítulo fundamental para la arqueología y etnografía nacional.<br>
+            Dentro de este fondo destacan también las escenas militares que artistas como Carl Nebel o Paul-Léon Jazet realizaron de las intervenciones norteamericana (1846-1848) y francesa (1864-1867). Por su parte, Édouard Pingret y Eugenio Landesio tuvieron residencia como catedráticos de la Academia de San Carlos; entre los discípulos de la primera clase de paisaje en el continente americano se encuentran Salvador Murillo, Luis Coto y Maldonado y José María Velasco, quienes desarrollaron gran habilidad para la representación de entornos naturales y costumbristas.<br>
+            A mediados del siglo xIx los valores de los modelos de nación -republicanos y conservadores- se vieron reflejados en los pinceles del catalán Pelegrín Clavé y Felipe Santiago Gutiérrez, quienes con influjo neoclásico cambiaron el rumbo del retrato en la sociedad mexicana. De las escuelas regionales destacan José Agustín Arrieta, José Escudero y Espronceda, Sacramento Espinosa y José María Estrada. Mención especial merece el pintor de pueblo Hermenegildo Bustos, quien de manera realista y con una profunda mirada psicológica, retrató a los vecinos de Purísima del Rincón, Guanajuato. El acervo de Museo Soumaya cuenta con 8 óleos estudiados por la crítica de arte Raquel Tibol. La colección también presenta pinceles anónimos que siguen la línea estilística de Clavé;<br>
+            ejemplo de ello es Rosita Alamán. Copiosos son los retratos de familia entre los que sobresalen los Gutiérrez, los Jáuregui y los Antuñano. Asimismo, destaca un extenso compendio de Muerte Niña.<br>
+            La colección de retrato se complementa con los fondos de miniaturas de Daniel Liebsohn realizadas por María de Jesús Ponce de Ybarrán, Antonio Tomasich y Haro, Francisca Salazar y Francisco Cabrera, entre otros. A decir de Carlos Monsivais, el universo en una nuez, pintadas al gouache sobre láminas de marfil, retratan a militares, rostros de damas, caballeros, niños y familias; algunas de estas imágenes fueron en ocasiones resguardadas en un estuche finamente decorado, que en un principio fue utilizado para proteger daguerrotipos y ambrotipos, o en medallones que conservaban al ser amado cerca del corazón como uno de los lugares favoritos de lo íntimo.Todas estas expresiones artísticas, en conjunto con los archivos y bibliotecas de Guillermo Tovar de Teresa y del Centro de Estudios de Historia de México, forman parte de la colección de siglo XIX y dan cuenta del contexto que, tras la lucha armada independentista conformaba el proyecto de nación, al tiempo que definieron la identidad de los mexicanos.</p><br>
+        <!-- Botón para regresar a la página de inicio -->
+        
+        <a href="{% url 'colecciones_museo' %}"><button class="colecciones-button">Colecciones</button></a>
+    </div>
+</div>
+</body>
+</html>

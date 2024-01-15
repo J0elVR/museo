@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+}
+.contentPage {
+    background-image: url(images/cover.jpg);
+    position: relative;
+	min-height: 90.5vh;
+	background-attachment: fixed;
+	align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* background-color: blue; */
+}
+
+.linkContentPage {
+    padding: 30px 0;
+    text-align: center;
+    /* background-color: brown; */
+}
+
+.linkContentPage a {
+    margin-left: 100px;
+    color: white;
+}
+
+.linkContentPage a:hover {
+    color: lightblue;
+    text-decoration: none;
+}

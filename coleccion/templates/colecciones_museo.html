@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+        <title>Colecciones</title>
+
+        <style>
+            * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+        }
+        h1 {
+            font-size: 40px;
+            text-align: center;
+        }
+        .img1 {
+            background-image: url(https://museoblaisten.com/images/coleccion/CN001.jpg);
+            width: 700px;
+            height: 550px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            border: 3px solid #ccc;
+            border-radius: 2cm;
+        }
+        .img2 {
+            background-image: url(https://www.musee-rodin.fr/sites/default/files/styles/diaporama_mav_0_5/public/2020-12/s.468_web_numjm010.jpg?itok=6QWnBurs);
+            width: 700px;
+            height: 550px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            border: 3px solid #ccc;
+            border-radius: 2cm;
+        }
+        .img3 {
+            background-image: url(https://www.lacma.org/sites/default/files/inline-images/EX8566_ROBERT_grande_1796_web_0.jpg);
+            width: 700px;
+            height: 550px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            border: 3px solid #ccc;
+            border-radius: 2cm;
+        }
+        .img4 {
+            background-image: url(https://hortushesperidum.files.wordpress.com/2015/04/the_fighting_tc3a9mc3a9raire_tugged_to_her_last_berth_to_be_broken.jpg?w=1200);
+            width: 700px;
+            height: 550px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            border: 3px solid #ccc;
+            border-radius: 2cm;
+        }
+        .paisaje-titulo {
+            font-size: 30px;
+            margin-left: 120px;
+        }
+        .rodin-titulo {
+            font-size: 30px;
+            margin-left: 350px;
+        }
+        .antiguo-titulo {
+            /* font-size: 30px; */
+            margin-left: 170px;
+        }
+        .roman-titulo {
+            /* font-size: 30px; */
+            margin-left: 270px;
+        }
+        .coleccion1 {
+            margin-left: 10px;
+            display: flex;
+            gap: 10px;
+        }
+        .coleccion2 {
+            margin-left: 10px;
+            display: flex;
+            gap: 10px;
+        }
+        .titulo1 {
+            margin-bottom: 30px;
+            display: flex;
+        }
+        .titulo2 {
+            margin-top: 40px;
+            margin-bottom: 30px;
+            display: flex;
+        }
+        .regresar-button {
+            margin-top: 30px;
+            margin-left: 15px;
+            width: 100px;
+            height: 45px;
+            border-radius: 2cm;
+            border: 3px solid #ccc;
+            border-color: #D71313;
+            background-color: white;
+            font-size: 15px;
+            color: black;
+        }
+        .regresar-button:hover {
+            background-color: #D71313;
+        }
+        .content-page {
+            /* background-color: #D71313; */
+            margin-top: 10px;
+            width: 100%;
+            min-height: 85.5vh;
+        }
+        .nav{
+            background-color: #AEDEFC;
+            height: 150px;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="nav">
+            <a href="{% url 'pagina_inicio' %}"><button class="regresar-button">Regresar inicio</button></a>
+            <h1>Colecciones del museo</h1>
+        </div>
+
+        <div class="content-page">
+            <div class="titulo1">
+                <h2 class="paisaje-titulo">Paisaje del México independiente</h2>
+                <h2 class="rodin-titulo">La Era de Rodin</h2>
+            </div>
+            <div class="coleccion1">
+                <a href="{% url 'coleccion_meso' %}"><button class="img1"></button></a><br>
+                <a href="{% url 'coleccion_colonia' %}"><button class="img2"></button></a><br>
+            </div>
+
+            <div class="titulo2">
+                <h2 class="antiguo-titulo">Antiguos maestros europeos</h2>
+                <h2 class="roman-titulo">Del romanticismo al impresionismo y las vanguardias</h2>
+            </div>
+            <div class="coleccion2">
+                <a href="{% url 'coleccion_maestros' %}"><button class="img3"></button></a><br>
+                <a href="{% url 'coleccion_romanticismo' %}"><button class="img4"></button></a><br>
+            </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <title>Historia del museo</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+            /* background-color: blue; */
+        }
+        h1 {
+            font-size: 40px;
+            margin-top: 20px;
+            margin-left: 100px;
+            color: #61677A;
+        }
+        .texto {
+            padding: 20px;
+            margin-left: 20px;
+            /* background-color: black; */
+            width: 500px;
+            height: 700px;
+            font-size: 23px;
+        }
+        .content-page {
+            background-image: url(https://images.pexels.com/photos/12331319/pexels-photo-12331319.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+            /* background-image: url(https://images.pexels.com/photos/14522227/pexels-photo-14522227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2); */
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            min-height: 100vh;
+            color: black;
+            
+        }
+        .regresar-button {
+            margin-top: 30px;
+            margin-left: 15px;
+            width: 100px;
+            height: 45px;
+            border-radius: 2cm;
+            border: 3px solid #ccc;
+            border-color: #D71313;
+            background-color: white;
+            font-size: 15px;
+            color: black;
+        }
+        .regresar-button:hover {
+            background-color: #D71313;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-page">
+        <a href="{% url 'pagina_inicio' %}"><button class="regresar-button">Regresar</button></a>
+        <h1>Acerca del museo</h1>
+        <div class="texto">
+            <p>El Museo Soumaya, situado en la Ciudad de México y fundado por Carlos Slim, es una joya arquitectónica que alberga una extensa colección de arte. La arquitectura única del edificio, diseñada por Fernando Romero, es tan impresionante como las más de 66,000 obras que residen dentro.<br>
+                <br>
+               La colección abarca desde arte europeo de los siglos XV al XX hasta piezas prehispánicas y obras contemporáneas. Entre las obras maestras se encuentran creaciones de Rodin, Renoir, Dalí y Van Gogh. Además de su valiosa colección, el museo ofrece programas educativos y eventos culturales, contribuyendo a la difusión y aprecio del arte en México. Con su compromiso con la accesibilidad y la diversidad, el Museo Soumaya se posiciona como un referente cultural y artístico en América Latina.
+            </p>
+        </div>
+    </div>
+    <!-- Botón para regresar a la página de inicio -->
+</body>
+</html>
